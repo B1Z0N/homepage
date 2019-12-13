@@ -1,0 +1,87 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300, 400, 700);
+
+body {
+  background: #485b6e;
+  color: #fff;
+  font-weight: 400;
+  font-family: "Lato", Calibri, Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+p {
+  margin: 30px auto;
+}
+
+.line {
+  width: 75%;
+  height: 1px;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 0 0 10px #333;
+}
+
+.name {
+  padding-top: 50px;
+  text-align: center;
+  text-shadow: 0 0 10px #333;
+}
+
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6 {
+  height: 150px;
+  background: #fc6e51;
+
+  border: 4px solid #e9573f;
+  border-radius: 10px;
+
+  text-shadow: 0 0 20px #333;
+  text-align: center;
+
+  padding: 10%;
+  transition: 0.5s;
+}
+
+.box2 {
+  background: #ccd1d9;
+  border-color: #aab2bd;
+}
+.box3 {
+  background: #ffce54;
+  border-color: #f6bb42;
+}
+.box4 {
+  background: #a0d468;
+  border-color: #8cc152;
+}
+.box5 {
+  background: #00a0a0;
+  border-color: #009090;
+}
+.box6 {
+  background: #4040ff;
+  border-color: #4a1cd1;
+}
+
+.box1:hover {
+  background: #e9573f; 
+}
+.box2:hover {
+  background: #aab2bd; 
+}
+.box3:hover {
+  background: #f6bb42; 
+}
+.box4:hover {
+  background: #8cc152; 
+}
+.box5:hover {
+  background: #009090; 
+}
+.box6:hover {
+  background: #4a1cd1; 
+}
