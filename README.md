@@ -1,2 +1,1 @@
-# homepage
-Homepage of my site
+My personal homepage.
