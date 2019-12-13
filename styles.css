@@ -33,7 +33,6 @@ p {
 .box4,
 .box5,
 .box6 {
-  height: 150px;
   background: #ff5230;
 
   border: 4px solid #af361d;
@@ -84,4 +83,8 @@ p {
 }
 .box6:hover {
   background: #4a1cd1; 
+}
+
+a, a:active, a:visited {
+  color: yellow;
 }
