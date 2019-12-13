@@ -34,9 +34,9 @@ p {
 .box5,
 .box6 {
   height: 150px;
-  background: #fc6e51;
+  background: #ff5230;
 
-  border: 4px solid #e9573f;
+  border: 4px solid #af361d;
   border-radius: 10px;
 
   text-shadow: 0 0 20px #333;
@@ -48,19 +48,19 @@ p {
 
 .box2 {
   background: #ccd1d9;
-  border-color: #aab2bd;
+  border-color: #8f9297;
 }
 .box3 {
   background: #ffce54;
-  border-color: #f6bb42;
+  border-color: #c7a13f;
 }
 .box4 {
   background: #a0d468;
-  border-color: #8cc152;
+  border-color: #668842;
 }
 .box5 {
   background: #00a0a0;
-  border-color: #009090;
+  border-color: #007c7c;
 }
 .box6 {
   background: #4040ff;
@@ -68,19 +68,19 @@ p {
 }
 
 .box1:hover {
-  background: #e9573f; 
+  background: #af361d; 
 }
 .box2:hover {
-  background: #aab2bd; 
+  background: #8f9297; 
 }
 .box3:hover {
-  background: #f6bb42; 
+  background: #c7a13f; 
 }
 .box4:hover {
-  background: #8cc152; 
+  background: #668842; 
 }
 .box5:hover {
-  background: #009090; 
+  background: #007c7c; 
 }
 .box6:hover {
   background: #4a1cd1; 
