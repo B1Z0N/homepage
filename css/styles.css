@@ -89,3 +89,21 @@ p {
 .box6:hover {
   background: #4a1cd1; 
 }
+
+#skill-list {
+  text-align: left;
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0;
+}
+
+#skill-list li {
+  transform: translateX(-100%);
+  transition: transform 0.5s, opacity 2s;
+  opacity: 0;
+}
+
+#skill-list .show {
+  opacity: 1;
+  transform: translateX(0%);
+}
