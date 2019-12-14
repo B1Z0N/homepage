@@ -140,36 +140,51 @@ const insertList = arr => {
   });
 };
 
-const groupByPL = () => {
-  console.log(1);
-  const PLs = {'C++' : 'cpp.png', 'Python' : 'python.png', 'JS' : 'js.png', 'C' : 'c.png'};
-  for (var pl in PLs) {
-    if (PLs.hasOwnProperty(pl)) {
-      PLs[pl] = { 'skills' : [], 'icon' : PLs[pl]};
+const addTabAndList = (tabs, by) => {
+  for (var tab in tabs) {
+    if (tabs.hasOwnProperty(tab)) {
+      val = tabs[tab] = { skills: [], icon: tabs[tab] };
 
       for (let skill of skills)
-        if (skill['pl'] === pl || skill['pl'].includes(pl))
-          PLs[pl]['skills'].push(skill['skill']);
+        if (skill[by] === tab || skill[by].includes(tab))
+          val["skills"].push(skill["skill"]);
 
-      addTab(pl, PLs[pl]['skills'], PLs[pl]['icon']);
+      addTab(tab, val["skills"], val["icon"]);
     }
   }
-  console.log(PLs);
+};
+
+// transform [tabName1, ...] to { tabName1 : tabName1 + '.png', ... }
+// for passing icon filenames to functions 
+const iconify = (tabArr) => {
+  var tabIconMap = {};
+  tabArr.forEach((elem) => {
+      tabIconMap[elem] = elem + '.png';
+  });
+
+  return tabIconMap;
+}
+
+const groupByPL = () => {
+  const PLs = {
+    "C++": "cpp.png",
+    Python: "python.png",
+    JS: "js.png",
+    C: "c.png"
+  };
+
+  addTabAndList(PLs, "pl");
 };
 
 const groupByLvl = () => {
-  console.log(2);
-  const LVLs = ["beginner", "average", "advanced"];
-  LVLs.forEach(elem => addTab(elem, [], elem + ".png"));
+  addTabAndList(iconify(["beginner", "average", "advanced"]), "lvl");
 };
+
 const groupByHardSoft = () => {
-  console.log(3);
-  ["hard", "soft"].forEach(elem => addTab(elem, [], elem + ".png"));
+    addTabAndList(iconify(["hard", "soft"]), "hard_soft");
 };
 const groupByPosition = () => {
-  console.log(4);
-  const positions = ["backend"];
-  positions.forEach(elem => addTab(elem, [], elem + ".png"));
+  addTabAndList(iconify(["backend"]), 'position');
 };
 
 const groupSkillsBy = function(val) {
