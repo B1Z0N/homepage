@@ -164,12 +164,12 @@ const insertList = (arr) => {
   arr = shuffle([...new Set(arr)]);
   lst.innerHTML = "";
   arr.forEach(elem => {
-    var style;
+    var style = '';
     if (elem['lvl'] === 'beginner') {
       style = "style='color: #a0d468'";
     } else if (elem['lvl'] === 'average') {
       style = "style='color: #ffce54'";
-    } else {
+    } else if (elem['lvl'] === 'advanced') {
       style = "style='color: #af361d'";
     }
     lst.innerHTML += `<li><h3 ${style} >${elem['skill']}</h3></li>`;
