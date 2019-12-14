@@ -47,7 +47,7 @@ function smoothScroll(eID) {
   var timer = 0;
   if (stopY > startY) {
     for (var i = startY; i < stopY; i += step) {
-      setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+      setTimeout('window.scrollTo(0, ' + leapY + ')', timer * speed);
       leapY += step;
       if (leapY > stopY) leapY = stopY;
       timer++;
@@ -55,7 +55,7 @@ function smoothScroll(eID) {
     return;
   }
   for (var i = startY; i > stopY; i -= step) {
-    setTimeout("window.scrollTo(0, " + leapY + ")", timer * speed);
+    setTimeout('window.scrollTo(0, ' + leapY + ')', timer * speed);
     leapY -= step;
     if (leapY < stopY) leapY = stopY;
     timer++;
@@ -67,13 +67,13 @@ function smoothScroll(eID) {
 //////////////////////////////////////////////////
 
 const listFadeIn = function() {
-  $("li")
+  $('li')
     .delay(100)
     .each(function(i) {
       $(this)
         .delay(300 * i)
         .queue(function() {
-          $(this).addClass("show");
+          $(this).addClass('show');
         });
     });
 };
@@ -129,12 +129,12 @@ const addTab = (title, lst, icon) => {
   );
 };
 const removeAllTabs = () => {
-  skillGroup.innerHTML = "";
+  skillGroup.innerHTML = '';
 };
 const insertList = arr => {
-  const lst = document.getElementById("skill-list");
+  const lst = document.getElementById('skill-list');
   arr = shuffle([...new Set(arr)]);
-  lst.innerHTML = "";
+  lst.innerHTML = '';
   arr.forEach(elem => {
     lst.innerHTML += `<li><h3>${elem}</h3></li>`;
   });
@@ -147,9 +147,9 @@ const addTabAndList = (tabs, by) => {
 
       for (let skill of skills)
         if (skill[by] === tab || skill[by].includes(tab))
-          val["skills"].push(skill["skill"]);
+          val['skills'].push(skill['skill']);
 
-      addTab(tab, val["skills"], val["icon"]);
+      addTab(tab, val['skills'], val['icon']);
     }
   }
 };
@@ -167,24 +167,24 @@ const iconify = (tabArr) => {
 
 const groupByPL = () => {
   const PLs = {
-    "C++": "cpp.png",
-    Python: "python.png",
-    JS: "js.png",
-    C: "c.png"
+    'C++': 'cpp.png',
+    Python: 'python.png',
+    JS: 'js.png',
+    C: 'c.png'
   };
 
-  addTabAndList(PLs, "pl");
+  addTabAndList(PLs, 'pl');
 };
 
 const groupByLvl = () => {
-  addTabAndList(iconify(["beginner", "average", "advanced"]), "lvl");
+  addTabAndList(iconify(['beginner', 'average', 'advanced']), 'lvl');
 };
 
 const groupByHardSoft = () => {
-    addTabAndList(iconify(["hard", "soft"]), "hard_soft");
+    addTabAndList(iconify(['hard', 'soft']), 'hard_soft');
 };
 const groupByPosition = () => {
-  addTabAndList(iconify(["backend"]), 'position');
+  addTabAndList(iconify(['backend']), 'position');
 };
 
 const groupSkillsBy = function(val) {
@@ -201,6 +201,6 @@ const groupSkillsBy = function(val) {
 };
 
 window.onload = () => {
-  skillGroup = document.getElementById("skillGroup");
-  groupSkillsBy("pl");
+  skillGroup = document.getElementById('skillGroup');
+  groupSkillsBy('pl');
 };
