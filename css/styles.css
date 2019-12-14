@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
+.unlink {
+  color: yellow;
+}
+
 p {
   margin: 30px auto;
 }
@@ -33,6 +37,7 @@ p {
 .box4,
 .box5,
 .box6 {
+  color: #fff;
   background: #ff5230;
 
   border: 4px solid #af361d;
@@ -83,8 +88,4 @@ p {
 }
 .box6:hover {
   background: #4a1cd1; 
-}
-
-a, a:active, a:visited {
-  color: yellow;
 }
