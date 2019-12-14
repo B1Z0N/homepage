@@ -131,12 +131,18 @@ const iconify = tabArr => {
 
   return tabIconMap;
 };
+// stringify list of { skill, lvl } to inject in html
+const stringifySkillList = skills => {
+  return JSON.stringify(skills).replace(/"/g, '\'');;
+}
 const getTabStyleNumber = () => {
   ++i;
   return (i % 6) + 1;
 };
 const addTab = (title, lst, icon) => {
-  lst = "[ '" + lst.join("', '") + "' ]";
+  console.log(lst);
+  lst = stringifySkillList(lst);
+  console.log(lst);
   skillGroup.innerHTML += groupTemplate.format(
     getTabStyleNumber(),
     lst,
@@ -153,12 +159,20 @@ const removeAllTabs = () => {
 //////////////////////////////////////////////////
 
 // inserts skill list into html
-const insertList = arr => {
+const insertList = (arr) => {
   const lst = document.getElementById("skill-list");
   arr = shuffle([...new Set(arr)]);
   lst.innerHTML = "";
   arr.forEach(elem => {
-    lst.innerHTML += `<li><h3>${elem}</h3></li>`;
+    var style;
+    if (elem['lvl'] === 'beginner') {
+      style = "style='color: #a0d468'";
+    } else if (elem['lvl'] === 'average') {
+      style = "style='color: #ffce54'";
+    } else {
+      style = "style='color: #af361d'";
+    }
+    lst.innerHTML += `<li><h3 ${style} >${elem['skill']}</h3></li>`;
   });
 };
 
@@ -169,11 +183,20 @@ const addTabAndList = (tabs, by) => {
     if (tabs.hasOwnProperty(tab)) {
       val = tabs[tab] = { skills: [], icon: tabs[tab] };
 
-      for (let skill of skills)
-        if (skill[by] === tab || skill[by].includes(tab))
-          val["skills"].push(skill["skill"]);
+      for (let skill of skills) {
+        var res;
+        if (typeof skill[by] == 'string') {
+          res = skill[by] === tab || skill[by] === 'any';
+        } else {
+          res = skill[by].includes(tab);
+        }
 
-      addTab(tab, val["skills"], val["icon"]);
+        if (res) {
+          val['skills'].push({ 'skill' : skill['skill'], 'lvl' : skill['lvl']});
+        }
+      }
+
+      addTab(tab, val['skills'], val['icon']);
     }
   }
 };
