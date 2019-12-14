@@ -25,69 +25,26 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/hover-min.css">
     <link rel="icon" href="../img/logo.png">
+
+    <script src="../script/skills.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <h1 class="name">Fedurko Nikolay</h1>
+        <h1 class="name">Skills</h1>
         <div class="line"></div>
-        <p>enthusiast programmer</p>
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box1">
-                    <div class="hvr-grow">
-                        <h3>Resume</h3>
-                        <img src="../img/resume.png" />
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box2">
-                    <div class="hvr-grow">
-                        <h3>Skills</h3>
-                        <img src="../img/skills.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box3">
-                    <div class="hvr-grow">
-                        <h3>Projects</h3>
-                        <img src="../img/projects.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box4">
-                    <div class="hvr-grow">
-                        <h3>Stats</h3>
-                        <img src="../img/stats.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h1 class="name">More</h1>
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box5">
-                    <div class="hvr-grow">
-                        <h3>About</h3>
-                        <img src="../img/about.png" height="100px">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 p-3">
-                <div class="box6">
-                    <div class="hvr-grow">
-                        <h3>Contacts</h3>
-                        <img src="../img/contacts.png">
-                    </div>
-                </div>
-            </div>
+        Group by
+        <select class="custom-select" id="groupBySelect" style="width: 30%;"
+            onchange="groupSkillsBy(this.options[this.selectedIndex].value);">
+            <option selected value="pl">programming language</option>
+            <option value="lvl">knowledge level</option>
+            <option value="hard_soft">hard&soft</option>
+            <option value="position">position</option>
+        </select>
+        <div class="row justify-content-center" id="skillGroup">
         </div>
         <p>
-            <a href="https://icons8.com/">icons</a>
+            <a href="https://icons8.com/" class="unlink">icons</a>
         </p>
     </div>
 </body>
