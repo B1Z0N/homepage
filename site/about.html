@@ -14,82 +14,149 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8">
 
     <title>B1Z0N</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
+    <meta name="description" content="About me">
+    <meta name="author" content="B1Z0N">
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/hover-min.css">
     <link rel="icon" href="../img/logo.png">
+    <script>
+        function getHoverColor(boxNum) {
+            switch (boxNum) {
+                case '1': return '#af361d';
+                case '2': return '#8f9297';
+                case '3': return '#c7a13f';
+                case '4': return '#668842';
+                case '5': return '#007c7c';
+                case '6': return '#4a1cd1';
+            }
+        }
+
+        window.onload = () => {
+            var i = Math.floor(Math.random() * 1000)
+            const facts = document.getElementsByClassName('fact-item');
+            for (let fact of facts) {
+                const box = `box${++i % 6 + 1}`;
+                fact.className += ' ' + box + ' mt-3';
+                fact.style.background = getHoverColor(box[box.length - 1]);
+            }
+        }
+    </script>
 </head>
 
 <body>
     <div class="container">
-        <h1 class="name">Fedurko Nikolay</h1>
+        <h1 class="name">About</h1>
         <div class="line"></div>
-        <p>enthusiast programmer</p>
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box1">
-                    <div class="hvr-grow">
-                        <h3>Resume</h3>
-                        <img src="../img/resume.png" />
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box2">
-                    <div class="hvr-grow">
-                        <h3>Skills</h3>
-                        <img src="../img/skills.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box3">
-                    <div class="hvr-grow">
-                        <h3>Projects</h3>
-                        <img src="../img/projects.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box4">
-                    <div class="hvr-grow">
-                        <h3>Stats</h3>
-                        <img src="../img/stats.png">
-                    </div>
-                </div>
-            </div>
-        </div>
+        Just a random facts about what kind of person am i
+        <div class="row justify-content-center mt-3">
+            <div class="col-xs-12 col-sm-12 col-md-11 col-lg-9">
+                <ul id="skill-list">
+                    <li class="show">
+                        <div class="fact-item">
+                            <p><h6>
+                                Greetings everyone! If you are here, then you are interested in what kind of
+                                person
+                                I
+                                am, so I'm
+                                going to give you a firm grasp on my life, it's lightest footprint.
+                            </h6></p>
+                        </div>
+                    </li>
+                    <li class="show">
+                        <div class="fact-item">
+                            <p><h6>
+                                My name is Kolia (Mykola, strictly speaking), I am 19 years back here in 2019, and i
+                                am
+                                from
+                                Ukraine.
+                                I am not going to tell you the history of my whole life, right now i am studying
+                                Computer
+                                Science at
+                                the IASA (ИПСА) of Kyiv Polytechnic University, 3rd grade.
+                            </h6></p>
+                        </div>
+                    </li>
+                    <li class="show">
+                        <div class="fact-item">
+                            <p><h6>
+                                I like learning everything myself, mainly by reading books, because:
+                                1. It is faster
+                                2. I can choose what o learn and what to skip, depending on my previous knowledge
+                            </h6></p>
+                        </div>
+                    </li>
+                    <li class="show">
+                        <div class="fact-item">
+                            <p><h6>
+                                I hate making frontend, it hurts me, including this site. Digging deeper: internal
+                                beauty is
+                                better
+                                than external, for me.
+                            </h6></p>
+                        </div>
+                    </li>
+                    <li class="show">
+                        <div class="fact-item">
+                            <p><h6>
+                                I am a whole lot of a skeptical person, that's good as for my profession - software
+                                engineer,
+                                but
+                                sometimes it is to hard to believe someone with this critical thinking mindset.
 
-        <h1 class="name">More</h1>
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box5">
-                    <div class="hvr-grow">
-                        <h3>About</h3>
-                        <img src="../img/about.png" height="100px">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 p-3">
-                <div class="box6">
-                    <div class="hvr-grow">
-                        <h3>Contacts</h3>
-                        <img src="../img/contacts.png">
-                    </div>
-                </div>
+                                This derives that I am, to be honest, well, honest in my thoughts and in my
+                                feelings. It
+                                is kind
+                                of
+                                hard for me to lie.
+                            </h6></p>
+                        </div>
+                    </li>
+                    <li class="show">
+                        <div class="fact-item">
+                            <p><h6>
+                                I don't have any idols. Furthermore, I am maverick.
+                            </h6></p>
+                        </div>
+                    </li>
+                    <li class="show">
+                        <div class="fact-item">
+                            <p><h6>
+                                As of my hobbies (ordered by significance):
+                                1. Thinking a lot about life, engineering, philosophy
+                                2. Music - singing, playing (guitar), listening to and sharing
+                                3. Sport - amateur gymnastics
+                                4. Math (number theory, linear algebra, category theory)
+                            </h6></p>
+                        </div>
+                    </li>
+                    <li class="show">
+                        <div class="fact-item">
+                            <p><h6>
+                                I don't believe in university studying, just keeping my promises.
+                            </h6></p>
+                        </div>
+                    </li>
+                    <li class="show">
+                        <div class="fact-item">
+                            <p><h6>
+                                Looking forward to new experience, both positive and negative.
+                            </h6></p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <p>
-            <a href="https://icons8.com/">icons</a>
-        </p>
     </div>
+    <p><h6>
+        <a href="https://icons8.com/" class="unlink">icons</a>
+    </h6></p>
+    </div>
+
 </body>
 
 </html>
