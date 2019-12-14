@@ -1,3 +1,4 @@
+// enable format on string objects too
 String.prototype.format = function () {
     var args = arguments;
     return this.replace(/\{(\d+)\}/g, function (a, num) {
@@ -6,9 +7,99 @@ String.prototype.format = function () {
 }
 
 
+//////////////////////////////////////////////////
+//// scrolling code
+//////////////////////////////////////////////////
+
+
+function currentYPosition() {
+    // Firefox, Chrome, Opera, Safari
+    if (self.pageYOffset) return self.pageYOffset;
+    // Internet Explorer 6 - standards mode
+    if (document.documentElement && document.documentElement.scrollTop)
+        return document.documentElement.scrollTop;
+    // Internet Explorer 6, 7 and 8
+    if (document.body.scrollTop) return document.body.scrollTop;
+    return 0;
+}
+
+
+function elmYPosition(eID) {
+    var elm = document.getElementById(eID);
+    var y = elm.offsetTop;
+    var node = elm;
+    while (node.offsetParent && node.offsetParent != document.body) {
+        node = node.offsetParent;
+        y += node.offsetTop;
+    } return y;
+}
+
+
+function smoothScroll(eID) {
+    var startY = currentYPosition();
+    var stopY = elmYPosition(eID);
+    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    if (distance < 100) {
+        scrollTo(0, stopY); return;
+    }
+    var speed = Math.round(distance / 25);
+    if (speed >= 20) speed = 20;
+    var step = Math.round(distance / 25);
+    var leapY = stopY > startY ? startY + step : startY - step;
+    var timer = 0;
+    if (stopY > startY) {
+        for ( var i=startY; i<stopY; i+=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+        } return;
+    }
+    for ( var i=startY; i>stopY; i-=step ) {
+        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+    }
+}
+
+
+//////////////////////////////////////////////////
+//// list animation
+//////////////////////////////////////////////////
+
+
+const listFadeIn = function() {
+    $("li").delay(100).each(function(i) {
+      $(this).delay(300 * i).queue(function() {
+        $(this).addClass("show");
+      })
+    })
+}
+
+
+//////////////////////////////////////////////////
+//// array random shuffle
+//////////////////////////////////////////////////
+
+
+function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
+}
+
+
+//////////////////////////////////////////////////
+//// site's own code
+//////////////////////////////////////////////////
+
+
 const groupTemplate = `
     <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-            <div class="box{0}" onclick="{1}">
+            <div class="box{0}" 
+              onclick="insertList({1}); listFadeIn(this); smoothScroll('skill-list');">
                 <div class="hvr-grow">
                     <h3>{2}</h3>
                 </div>
@@ -23,36 +114,54 @@ const getBoxStyleNumber = () => {
     ++i;
     return i % 6 + 1;
 };
-const addTab = (title, onclickFnName) => {
+const addTab = (title, lst) => {
+    lst = "[ '" + lst.join("', '") + "' ]";
     skillGroup.innerHTML += groupTemplate.format(
         getBoxStyleNumber(), 
-        onclickFnName + `('${title}');`, 
-        title
+        lst, title
     );
 };
 const removeAllTabs = () => {
     skillGroup.innerHTML = '';
 };
-
+const insertList = (arr) => {
+    const lst = document.getElementById('skill-list');
+    arr = shuffle([...new Set(arr)]);
+    lst.innerHTML = '';
+    arr.forEach((elem) => {
+        lst.innerHTML += `<li><h3>${elem}</h3></li>`; 
+    });
+}
 
 const groupByPL = () => {
     console.log(1);
-    const PLs = ['C++', 'Python', 'JS', 'C', ];
-    PLs.forEach((elem) => addTab(elem, 'console.log'))
+    var arr = ['Templates', 'Multithreading', 'Preprocessor', 'C knowledge', 'Multithreading'];
+    const PLs = {
+        'C++': arr, 
+        'Python': arr, 
+        'JS': arr, 
+        'C': arr, 
+    };
+    for (var key in PLs) {
+        // check if the property/key is defined in the object itself, not in parent
+        if (PLs.hasOwnProperty(key)) {           
+            addTab(key, PLs[key]);
+        }
+    }
 };
 const groupByLvl = () => {
-    console.log(2);
+    console.log(2); 
     const LVLs = ['beginner', 'average', 'advanced'];
-    LVLs.forEach((elem) => addTab(elem, 'console.log'));
+    LVLs.forEach((elem) => addTab(elem, []));
 };
 const groupByHardSoft = () => {
     console.log(3);
-    ['hard', 'soft'].forEach((elem) => addTab(elem, 'console.log'));
+    ['hard', 'soft'].forEach((elem) => addTab(elem, []));
 };
 const groupByPosition = () => {
     console.log(4);
     const positions = ['backend', ];
-    positions.forEach((elem) => addTab(elem, 'console.log'));
+    positions.forEach((elem) => addTab(elem, []));
 };
 
 const groupSkillsBy = function(val) {
