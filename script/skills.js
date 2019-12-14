@@ -102,6 +102,7 @@ const groupTemplate = `
               onclick="insertList({1}); listFadeIn(this); smoothScroll('skill-list');">
                 <div class="hvr-grow">
                     <h3>{2}</h3>
+                    <img src="../img/skills/{3}">
                 </div>
             </div>
     </div>
@@ -114,11 +115,11 @@ const getBoxStyleNumber = () => {
     ++i;
     return i % 6 + 1;
 };
-const addTab = (title, lst) => {
+const addTab = (title, lst, icon) => {
     lst = "[ '" + lst.join("', '") + "' ]";
     skillGroup.innerHTML += groupTemplate.format(
         getBoxStyleNumber(), 
-        lst, title
+        lst, title, icon
     );
 };
 const removeAllTabs = () => {
@@ -137,31 +138,31 @@ const groupByPL = () => {
     console.log(1);
     var arr = ['Templates', 'Multithreading', 'Preprocessor', 'C knowledge', 'Multithreading'];
     const PLs = {
-        'C++': arr, 
-        'Python': arr, 
-        'JS': arr, 
-        'C': arr, 
+        'C++': [arr, 'cpp.png'], 
+        'Python': [arr, 'python.png'], 
+        'JS': [arr, 'js.png'], 
+        'C': [arr, 'c.png'], 
     };
     for (var key in PLs) {
         // check if the property/key is defined in the object itself, not in parent
         if (PLs.hasOwnProperty(key)) {           
-            addTab(key, PLs[key]);
+            addTab(key, PLs[key][0], PLs[key][1]);
         }
     }
 };
 const groupByLvl = () => {
     console.log(2); 
     const LVLs = ['beginner', 'average', 'advanced'];
-    LVLs.forEach((elem) => addTab(elem, []));
+    LVLs.forEach((elem) => addTab(elem, [], elem + '.png'));
 };
 const groupByHardSoft = () => {
     console.log(3);
-    ['hard', 'soft'].forEach((elem) => addTab(elem, []));
+    ['hard', 'soft'].forEach((elem) => addTab(elem, [], elem + '.png'));
 };
 const groupByPosition = () => {
     console.log(4);
     const positions = ['backend', ];
-    positions.forEach((elem) => addTab(elem, []));
+    positions.forEach((elem) => addTab(elem, [], elem + '.png'));
 };
 
 const groupSkillsBy = function(val) {
