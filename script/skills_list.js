@@ -30,14 +30,14 @@ const skills = [
       skill: 'OOP',
       pl: ['C++', 'Python', 'JS', ],
       hard_soft: 'hard',
-      lvl: ['average', 'advanced'],
+      lvl: 'advanced',
       position: 'backend',
     },
     {
       skill: 'C++11 and above',
       pl: 'C++',
       hard_soft: 'hard',
-      lvl: ['average', 'advanced'],
+      lvl: 'average',
       position: 'backend',
     },
     {
