@@ -26,66 +26,8 @@
     <link rel="icon" href="../img/logo.png">
 
     <script src="../script/projects/list.js"></script>
-    <script>
-        // project template
-        const projectTemplate = `
-            <a href="{0}">
-                    <div class="box{1} mt-3">
-                        <p>
-                            <h1>
-                                {2}
-                            </h1>
-                        </p>
-                        <p>
-                            <h3>
-                                {3}
-                            </h3>
-                        </p>
-                    <span class="badge badge-light badge-pill">{4}</span>
-                </div>
-            </a>
-        `;
-
-        // enable format on string objects too
-
-        String.prototype.format = function () {
-            var args = arguments;
-            return this.replace(/\{(\d+)\}/g, function (a, num) {
-                return args[num] || a;
-            });
-        };
-
-        // shuffling array
-
-        function shuffle(a) {
-            var j, x, i;
-            for (i = a.length - 1; i > 0; i--) {
-                j = Math.floor(Math.random() * (i + 1));
-                x = a[i];
-                a[i] = a[j];
-                a[j] = x;
-            }
-            return a;
-        }
-
-        // display projects data form projects object
-
-        const displayProjects = () => {
-            const projectList = document.getElementById('project-list')
-            var i = Math.floor(Math.random() * 1000);
-            for (let project of projects) {
-                projectList.innerHTML += projectTemplate.format(
-                    project['link'],
-                    ++i % 6 + 1,
-                    project['title'],
-                    project['language'],
-                    project['date']
-                );
-            }
-        }
-
-        window.onload = displayProjects;
-    </script>
+    <script src="../script/utils.js"></script>
+    <script src="../script/projects/script.js"></script>
 </head>
 
 <body>
