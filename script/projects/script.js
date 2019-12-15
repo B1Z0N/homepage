@@ -19,10 +19,46 @@ const projectTemplate = `
 
 // display projects data form projects object
 
-const displayProjects = () => {
+var orderBy;
+var lang; 
+
+const orderProjectsBy = arr => {
+  const cmpDate = (a, b) => {
+    return Date.parse(a["date"]) - Date.parse(b["date"]);
+  };
+  const cmp = {
+    "-date": cmpDate,
+    date: (a, b) => {
+      return -cmpDate(a, b);
+    }
+  };
+
+  return arr.sort(cmp[orderBy]);
+};
+
+const languageFilterBy = arr => {
+  var res = [];
+  for (let project of arr) {
+    var include;
+    if (typeof project["language"] === "string") {
+      include = project["language"] === lang || project["language"] === "any";
+    } else {
+      include = project["language"].includes(lang);
+    }
+
+    if (lang === "any" || include === true) {
+      res.push(project);
+    }
+  }
+
+  return res;
+};
+
+const displayProjects = arr => {
   const projectList = document.getElementById("project-list");
+  projectList.innerHTML = "";
   var i = Math.floor(Math.random() * 1000);
-  for (let project of projects) {
+  for (let project of arr) {
     projectList.innerHTML += projectTemplate.format(
       project["link"],
       (++i % 6) + 1,
@@ -33,4 +69,18 @@ const displayProjects = () => {
   }
 };
 
-window.onload = displayProjects;
+const filterAndSort = (_orderBy = -1, _lang = -1) => {
+  orderBy = _orderBy === -1 ? orderBy : _orderBy;
+  lang = _lang === -1 ? lang : _lang;
+  console.log(orderBy);
+  return displayProjects(orderProjectsBy(languageFilterBy(projects)));
+};
+
+window.onload = () => {
+    orderBy = document.getElementById('orderBySelect').options;
+    orderBy = orderBy[orderBy.selectedIndex].value;
+    lang = document.getElementById('languageSelect').options;
+    lang = lang[lang.selectedIndex].value;
+    
+    filterAndSort();
+}

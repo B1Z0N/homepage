@@ -1,15 +1,15 @@
-const projects = [
+var projects = [
     {
         'title' : 'This site',
         'date' : '2019-12-15',
         'link' : 'https://github.com/B1Z0N/homepage',
-        'language' : 'HTML | CSS | JS',
+        'language' : ['HTML', 'CSS', 'JS'],
     },
     {
         'title' : 'Job Search Site',
         'date' : '2019-11-25',
         'link' : 'https://github.com/B1Z0N/workspide',
-        'language' : 'Python | Django',
+        'language' : ['Python', 'Django'],
     },
     {
         'title' : 'Arithmetic Notation Converter',
@@ -45,7 +45,7 @@ const projects = [
         'title' : 'Custom bootloader',
         'date' : '2018-08-23',
         'link' : 'https://github.com/B1Z0N/CustomBootloader',
-        'language' : 'NASM (Assembly)',
+        'language' : 'NASM',
     },
     {
         'title' : 'cmd utility for commenting code',
