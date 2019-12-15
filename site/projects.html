@@ -14,82 +14,96 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8">
 
     <title>B1Z0N</title>
-    <meta name="description" content="The HTML5 Herald">
-    <meta name="author" content="SitePoint">
+    <meta name="description" content="About me">
+    <meta name="author" content="B1Z0N">
 
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/hover-min.css">
     <link rel="icon" href="../img/logo.png">
+
+    <script src="../script/projects/list.js"></script>
+    <script>
+        // project template
+        const projectTemplate = `
+            <a href="{0}">
+                    <div class="box{1} mt-3">
+                        <p>
+                            <h1>
+                                {2}
+                            </h1>
+                        </p>
+                        <p>
+                            <h3>
+                                {3}
+                            </h3>
+                        </p>
+                    <span class="badge badge-light badge-pill">{4}</span>
+                </div>
+            </a>
+        `;
+
+        // enable format on string objects too
+
+        String.prototype.format = function () {
+            var args = arguments;
+            return this.replace(/\{(\d+)\}/g, function (a, num) {
+                return args[num] || a;
+            });
+        };
+
+        // shuffling array
+
+        function shuffle(a) {
+            var j, x, i;
+            for (i = a.length - 1; i > 0; i--) {
+                j = Math.floor(Math.random() * (i + 1));
+                x = a[i];
+                a[i] = a[j];
+                a[j] = x;
+            }
+            return a;
+        }
+
+        // display projects data form projects object
+
+        const displayProjects = () => {
+            const projectList = document.getElementById('project-list')
+            var i = Math.floor(Math.random() * 1000);
+            for (let project of projects) {
+                projectList.innerHTML += projectTemplate.format(
+                    project['link'],
+                    ++i % 6 + 1,
+                    project['title'],
+                    project['language'],
+                    project['date']
+                );
+            }
+        }
+
+        window.onload = displayProjects;
+    </script>
 </head>
 
 <body>
     <div class="container">
-        <h1 class="name">Fedurko Nikolay</h1>
+        <h1 class="name">Projects</h1>
         <div class="line"></div>
-        <p>enthusiast programmer</p>
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box1">
-                    <div class="hvr-grow">
-                        <h3>Resume</h3>
-                        <img src="../img/resume.png" />
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box2">
-                    <div class="hvr-grow">
-                        <h3>Skills</h3>
-                        <img src="../img/skills.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box3">
-                    <div class="hvr-grow">
-                        <h3>Projects</h3>
-                        <img src="../img/projects.png">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box4">
-                    <div class="hvr-grow">
-                        <h3>Stats</h3>
-                        <img src="../img/stats.png">
-                    </div>
-                </div>
-            </div>
+        ( clickable )
+        <div class="row justify-content-center mt-3">
+            <div class="col-xs-12 col-sm-12 col-md-11 col-lg-9" id="project-list"></div>
         </div>
-
-        <h1 class="name">More</h1>
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                <div class="box5">
-                    <div class="hvr-grow">
-                        <h3>About</h3>
-                        <img src="../img/about.png" height="100px">
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 p-3">
-                <div class="box6">
-                    <div class="hvr-grow">
-                        <h3>Contacts</h3>
-                        <img src="../img/contacts.png">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <p>
-            <a href="https://icons8.com/">icons</a>
-        </p>
     </div>
+    <p>
+        <h6>
+            <a href="https://icons8.com/" class="unlink">icons</a>
+        </h6>
+    </p>
+    </div>
+
 </body>
 
 </html>
