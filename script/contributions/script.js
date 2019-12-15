@@ -21,18 +21,25 @@ var lang, contribStatus;
 // display contributions data from contributions object
 
 const displayContributions = arr => {
-  const contribList = document.getElementById("project-list");
-  contribList.innerHTML = "";
   var i = Math.floor(Math.random() * 1000);
-  for (let contrib of arr) {
-    contribList.innerHTML += contribTemplate.format(
-      contrib["link"],
-      (++i % 6) + 1,
-      contrib["title"],
-      contrib["language"],
-      contrib["status"]
-    );
-  }
+
+  $("#__pagination").pagination({
+    dataSource: arr,
+    callback: function(projects, pagination) {
+      var html = "";
+      for (let contrib of projects) {
+        html += contribTemplate.format(
+          contrib["link"],
+          (++i % 6) + 1,
+          contrib["title"],
+          contrib["language"],
+          contrib["status"]
+        );
+      }
+
+      $("#project-list").html(html);
+    }
+  });
 };
 
 const languageFilterBy = arr => {
@@ -59,7 +66,8 @@ const statusFilterBy = arr => {
     var include;
     if (
       contribStatus === "any" ||
-      (typeof contrib["status"] === "string" && contrib["status"] === contribStatus)
+      (typeof contrib["status"] === "string" &&
+        contrib["status"] === contribStatus)
     ) {
       res.push(contrib);
     }

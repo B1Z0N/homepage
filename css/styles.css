@@ -114,3 +114,10 @@ p {
   color: white;
   text-decoration: none;
 }
+
+#__pagination ul li {
+  align-self: center;
+  display: inline;
+  padding: 4px;
+  color: yellow;
+}

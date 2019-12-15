@@ -28,5 +28,11 @@ const contributions = [
     link: "https://github.com/faheel/BigInt/pull/49",
     language: "C++",
     status: "open"
+  },
+  {
+    title: "CLRS | greedy algos",
+    link: "https://github.com/gzc/CLRS/pull/305",
+    language: "C++",
+    status: "open"
   }
 ];
