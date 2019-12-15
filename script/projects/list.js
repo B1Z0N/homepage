@@ -60,7 +60,7 @@ const projects = [
         'language' : 'C',
     },
     {
-        'title' : 'Numerical system converter (even negative)',
+        'title' : 'Numerical system converter',
         'date' : '2017-08-15',
         'link' : 'https://github.com/B1Z0N/numerical_sys',
         'language' : 'C',

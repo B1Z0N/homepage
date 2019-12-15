@@ -3,9 +3,9 @@ const projectTemplate = `
             <a href="{0}">
                     <div class="box{1} mt-3">
                         <p>
-                            <h1>
+                            <h2>
                                 {2}
-                            </h1>
+                            </h2>
                         </p>
                         <p>
                             <h3>
