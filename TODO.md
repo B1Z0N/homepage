@@ -1,7 +1,8 @@
 TODO:
 
 - Projects
-    - Order by date and pride
+    - Order by date
+    - Filter by language
     - Paging
 - Stats
 - Contributions
