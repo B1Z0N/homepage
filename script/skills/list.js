@@ -173,7 +173,7 @@ const skills = [
       skill: 'Docker',
       pl: 'any',
       hard_soft: 'hard',
-      lvl: 'medium',
+      lvl: 'average',
       position: 'any',
     },
     {
