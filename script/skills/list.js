@@ -163,6 +163,20 @@ const skills = [
     },
     // other
     {
+      skill: 'Asynchronous programming',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'any'
+    },
+    {
+      skill: 'Docker',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'medium',
+      position: 'any',
+    },
+    {
       skill: 'Linux cmd user',
       pl: 'any',
       hard_soft: 'hard',

@@ -1,5 +1,11 @@
 const contributions = [
   {
+    title: "SagasLife | photo scale microservice",
+    link: "https://github.com/IASA-HUB/photo-scale-microservice",
+    language: "Java",
+    status: "merged"
+  },
+  {
     title: "GSL | memory leaks",
     link: "https://github.com/microsoft/GSL/pull/803",
     language: "C++",

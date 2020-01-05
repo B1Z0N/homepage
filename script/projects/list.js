@@ -1,5 +1,11 @@
 var projects = [
     {
+        'title' : 'Photo Scale Microservice',
+        'date' : '2020-01-04',
+        'link' : 'https://github.com/B1Z0N/photo-scale-microservice',
+        'language' : 'Java',
+    },
+    {
         'title' : 'This site',
         'date' : '2019-12-15',
         'link' : 'https://github.com/B1Z0N/homepage',
