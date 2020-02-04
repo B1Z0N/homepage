@@ -161,6 +161,21 @@ const skills = [
       lvl: 'beginner',
       position: 'backend',
     },
+    // Java
+    {
+      skill: 'language basics',
+      pl: 'java',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'any',
+    },
+    {
+      skill: 'vertx',
+      pl: 'java',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'any',
+    },
     // other
     {
       skill: 'Asynchronous programming',
@@ -216,6 +231,20 @@ const skills = [
       pl: 'any',
       hard_soft: 'hard',
       lvl: 'advanced',
+      position: 'any',
+    },
+    {
+      skill: 'kafka',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'any',
+    },
+    {
+      skill: 'elasticsearch',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'beginner',
       position: 'any',
     },
     // soft skills

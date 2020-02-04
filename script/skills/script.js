@@ -115,8 +115,9 @@ const groupByPL = () => {
   const PLs = {
     "C++": "cpp.png",
     Python: "python.png",
+    C: "c.png",
     JS: "js.png",
-    C: "c.png"
+    Java: "java.png",
   };
 
   addTabAndList(PLs, "pl");
