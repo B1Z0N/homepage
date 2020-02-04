@@ -1,5 +1,11 @@
 const contributions = [
   {
+    title: "Mus. instruments site | backend",
+    link: "https://github.com/flykiller24/Coursach/pull/1",
+    language: "JS",
+    status: "merged"
+  },
+  {
     title: "SagasLife | photo scale microservice",
     link: "https://github.com/IASA-HUB/photo-scale-microservice",
     language: "Java",

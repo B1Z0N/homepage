@@ -1,5 +1,11 @@
 var projects = [
     {
+        'title' : 'Geo and Tag search microservice',
+        'date' : '2020-01-21',
+        'link' : 'https://github.com/B1Z0N/search-microservice',
+        'language' : 'Java',
+    },
+    {
         'title' : 'This site',
         'date' : '2019-12-15',
         'link' : 'https://github.com/B1Z0N/homepage',
