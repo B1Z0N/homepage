@@ -58,10 +58,7 @@ const iconify = topics => Array.isArray(topics) ? iconifyArray(topics) : iconify
 const stringifySkillList = skills => {
   return JSON.stringify(skills).replace(/"/g, '\'');
 }
-const getTabStyleNumber = () => {
-  ++i;
-  return (i % 6) + 1;
-};
+
 const addTab = (title, lst, icon) => {
   console.log(lst);
   lst = stringifySkillList(lst);
