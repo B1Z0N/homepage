@@ -18,8 +18,8 @@ const contribTemplate = `
         `;
 
 var lang, contribStatus;
-// display contributions data from contributions object
 
+// display contributions data from contributions object
 const displayContributions = arr => {
   var i = Math.floor(Math.random() * 1000);
 
@@ -82,11 +82,21 @@ const fullFilter = (_lang = -1, _status = -1) => {
   displayContributions(languageFilterBy(statusFilterBy(contributions)));
 };
 
-window.onload = () => {
+const initLangs = langs => {
+  const option = (lang) => `<option value="${lang}">${lang}</option>`;
+  const selector = document.getElementById("languageSelect");
+  langs.forEach(lang => selector.innerHTML += option(lang)); 
+};
+
+const initState = () => {
   lang = document.getElementById("languageSelect").options;
   lang = lang[lang.selectedIndex].value;
   contribStatus = document.getElementById("statusSelect").options;
   contribStatus = contribStatus[contribStatus.selectedIndex].value;
+};
 
+window.onload = () => {
+  initLangs(langs);
+  initState();
   fullFilter();
 };

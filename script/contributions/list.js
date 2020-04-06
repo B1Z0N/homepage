@@ -48,3 +48,5 @@ const contributions = [
     status: "open"
   }
 ];
+
+const langs = [ "C++", "JS", "Python", "C", "Java" ];
