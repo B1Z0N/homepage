@@ -36,6 +36,10 @@
             document.body.removeChild(a);
         }
     </script>
+
+    <script src="../script/utils.js"></script>
+    <script src="../script/resume/list.js"></script>
+    <script src="../script/resume/script.js"></script>
 </head>
 
 <body>
@@ -43,15 +47,8 @@
         <h1 class="name">Resume</h1>
         <div class="line"></div>
         <p>click to dwnld</p>
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 pt-3">
-                    <div class="box2" onclick='showPDF("FedurkoCppResume.pdf");'>
-                        <div class="hvr-grow">
-                            <h3>C++ developer</h3>
-                            <img src="../img/skills/cpp.png" />
-                        </div>
-                    </div>
-            </div>
+        <div class="row justify-content-center" id="resumeList">
+            <!-- to be inserted in JS -->
         </div>
         <p>
             <a href="https://icons8.com/" class="unlink">icons</a>
