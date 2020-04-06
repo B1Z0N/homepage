@@ -15,4 +15,6 @@ To customize any of these, say, "topic" is one of these four. You need to go to 
 
 # Future
 
-It may be useful to have some scripts to automate customization or even some actual backend to do this(like tg bots etc.)
+1. It may be useful to have some scripts to automate customization 
+2. Or even some actual backend to do this(like tg bots etc.)
+3. Fix paging layout
