@@ -72,3 +72,5 @@ var projects = [
         'language' : 'C',
     },
 ];
+
+const langs = [ "C++", "JS", "Python", "C", "Java", "shell", "NASM" ];

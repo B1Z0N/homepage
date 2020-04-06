@@ -84,11 +84,21 @@ const filterAndSort = (_orderBy = -1, _lang = -1) => {
   return displayProjects(orderProjectsBy(languageFilterBy(projects)));
 };
 
-window.onload = () => {
+const initLangs = langs => {
+  const option = (lang) => `<option value="${lang}">${lang}</option>`;
+  const selector = document.getElementById("languageSelect");
+  langs.forEach(lang => selector.innerHTML += option(lang)); 
+};
+
+const initState = () => {
   orderBy = document.getElementById("orderBySelect").options;
   orderBy = orderBy[orderBy.selectedIndex].value;
   lang = document.getElementById("languageSelect").options;
   lang = lang[lang.selectedIndex].value;
+};
 
+window.onload = () => {
+  initLangs(langs);
+  initState();
   filterAndSort();
 };
