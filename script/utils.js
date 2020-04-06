@@ -93,3 +93,12 @@ String.prototype.format = function() {
     }
     return a;
   }
+
+//////////////////////////////////////////////////
+//// get new color to the topic tab
+//////////////////////////////////////////////////
+
+const getTabStyleNumber = (function anonymous() {
+  let i = 1;
+  return () => (i++ % 6) + 1;
+})();
