@@ -1,3 +1,9 @@
+/* To customize it, just 
+ * 1. Add new entry to `contributions` array
+ * 2. Check if language you are entering is new, 
+ * if it is, then add it to `langs` array(in the end of the file)
+**/
+
 var projects = [
     {
         'title' : 'Geo and Tag search microservice',

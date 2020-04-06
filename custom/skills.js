@@ -1,7 +1,10 @@
+/* To customize it, just 
+ * 1. Append new skill to `skills` array
+ * 2. Upload it's icon to `img/skills/`
+ * 3. Read at the end of this file
+ */
 
-//////////////////////////////////////////////////
-//// single source of truth about my skills
-//////////////////////////////////////////////////
+/* icons - https://icons8.com/  (100x100px)*/ 
 
 const skills = [
     // C/C++
@@ -299,15 +302,25 @@ const skills = [
     },
   ];
 
-  const PLs = {
-    "C++": "cpp.png",
-    Python: "python.png",
-    C: "c.png",
-    JS: "js.png",
-    Java: "java.png",
-  };
 
-  const lvls = [ "beginner", "average", "advanced"];
-  const skillType = [ "hard", "soft" ];
-  const position = [ "backend" ];
+// have you added the new 
+// 1. Programming language?
+const PLs = {
+  "C++": "cpp.png",
+  Python: "python.png",
+  C: "c.png",
+  JS: "js.png",
+  Java: "java.png",
+};
 
+// 2. Knowledge level?
+const lvls = [ "beginner", "average", "advanced"];
+// 3. Skill type?
+const skillType = [ "hard", "soft" ];
+// 4. Work position?
+const position = [ "backend" ];
+
+// if so, add new type to one of this arrays(appropriate one)
+
+// P. S. this arrays are here because it is more performant then 
+// getting it from `skills` array every time the user loads the page
