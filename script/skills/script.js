@@ -27,19 +27,36 @@ window.onload = () => {
 //// working with tabs
 //////////////////////////////////////////////////
 
-// transform [tabName1, ...] to { tabName1 : tabName1 + '.png', ... }
-// for passing icon filenames to functions
-const iconify = tabArr => {
-  var tabIconMap = {};
-  tabArr.forEach(elem => {
-    tabIconMap[elem] = elem + ".png";
+// transform { topicName1 : iconName1, topicName2 : null, ... }; 
+// to { topicName1 : iconName1, topicName2 : topicName2 + '.png'}; 
+const iconifyMapping = topics => {
+  for (var tp in topics) {
+    if (topics[tp] === null) {
+      topics[tp] = tp.toLowerCase() + '.png';
+    } 
+  }
+
+  return topics;
+};
+
+// transform [topicName1, ...] to { topicName1 : topicName1 + '.png', ... }
+const iconifyArray = topics => {
+  var topicIconMap = {};
+  topics.forEach(elem => {
+    topicIconMap[elem] = elem + ".png";
   });
 
-  return tabIconMap;
+  return topicIconMap;
 };
+
+// for passing icon filenames to functions
+const iconify = topics => Array.isArray(topics) ? iconifyArray(topics) : iconifyMapping(topics); 
+
+
+
 // stringify list of { skill, lvl } to inject in html
 const stringifySkillList = skills => {
-  return JSON.stringify(skills).replace(/"/g, '\'');;
+  return JSON.stringify(skills).replace(/"/g, '\'');
 }
 const getTabStyleNumber = () => {
   ++i;
@@ -111,28 +128,10 @@ const addTabAndList = (tabs, by) => {
 //// various group by functions
 //////////////////////////////////////////////////
 
-const groupByPL = () => {
-  const PLs = {
-    "C++": "cpp.png",
-    Python: "python.png",
-    C: "c.png",
-    JS: "js.png",
-    Java: "java.png",
-  };
-
-  addTabAndList(PLs, "pl");
-};
-
-const groupByLvl = () => {
-  addTabAndList(iconify(["beginner", "average", "advanced"]), "lvl");
-};
-
-const groupByHardSoft = () => {
-  addTabAndList(iconify(["hard", "soft"]), "hard_soft");
-};
-const groupByPosition = () => {
-  addTabAndList(iconify(["backend"]), "position");
-};
+const groupByPL = () => addTabAndList(iconify(PLs), "pl");
+const groupByLvl = () => addTabAndList(iconify(lvls), "lvl");
+const groupByHardSoft = () => addTabAndList(iconify(skillType), "hard_soft");
+const groupByPosition = () => addTabAndList(iconify(position), "position");
 
 // general function that calls one of groupBy* functions
 const groupSkillsBy = function(val) {
@@ -143,6 +142,7 @@ const groupSkillsBy = function(val) {
     hard_soft: groupByHardSoft,
     position: groupByPosition
   };
+
   if (!Object.keys(groupByFunctions).includes(val)) return;
   removeAllTabs();
   return groupByFunctions[val]();

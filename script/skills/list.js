@@ -163,7 +163,7 @@ const skills = [
     },
     // Java
     {
-      skill: 'language basics',
+      skill: 'Java language basics',
       pl: 'java',
       hard_soft: 'hard',
       lvl: 'beginner',
@@ -298,3 +298,16 @@ const skills = [
       position: '', 
     },
   ];
+
+  const PLs = {
+    "C++": "cpp.png",
+    Python: "python.png",
+    C: "c.png",
+    JS: "js.png",
+    Java: "java.png",
+  };
+
+  const lvls = [ "beginner", "average", "advanced"];
+  const skillType = [ "hard", "soft" ];
+  const position = [ "backend" ];
+
