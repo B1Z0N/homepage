@@ -9,6 +9,27 @@
 const skills = [
     // C/C++
     {
+      skill: 'APR',
+      pl: 'C',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: ''
+    },
+    {
+      skill: 'openSSL API',
+      pl: 'C',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: ''
+    },
+    {
+      skill: 'GNU autotools',
+      pl: [ 'C++', 'C' ],
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: ''
+    },
+    {
       skill: 'C++ Templates',
       pl: 'C++',
       hard_soft: 'hard',
@@ -179,7 +200,29 @@ const skills = [
       lvl: 'beginner',
       position: 'any',
     },
+    // C#
+    {
+      skill: 'C#',
+      pl: 'C#',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'any'
+    },   
+    {
+      skill: 'Selenium',
+      pl: [ 'C#', 'JS' ],
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'any'
+    },
     // other
+    {
+      skill: 'Jenkins',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'any'
+    },
     {
       skill: 'Asynchronous programming',
       pl: 'any',
@@ -306,19 +349,20 @@ const skills = [
 // have you added the new 
 // 1. Programming language?
 const PLs = {
-  "C++": "cpp.png",
-  Python: "python.png",
-  C: "c.png",
-  JS: "js.png",
-  Java: "java.png",
+  'C++': 'cpp.png',
+  Python: 'python.png',
+  C: 'c.png',
+  JS: 'js.png',
+  Java: 'java.png',
+  'C#': 'csharp.png',
 };
 
 // 2. Knowledge level?
-const lvls = [ "beginner", "average", "advanced"];
+const lvls = [ 'beginner', 'average', 'advanced'];
 // 3. Skill type?
-const skillType = [ "hard", "soft" ];
+const skillType = [ 'hard', 'soft' ];
 // 4. Work position?
-const position = [ "backend" ];
+const position = [ 'backend' ];
 
 // if so, add new type to one of this arrays(appropriate one)
 
