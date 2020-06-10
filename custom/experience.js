@@ -10,7 +10,7 @@ const experience = [
   {
     name: "pet",
     position: "oss | study",
-    link: "/index.html",
+    link: "/homepage",
     from: "mar 2017",
     to: "nov 2019",
   },
