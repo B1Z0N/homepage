@@ -10,6 +10,7 @@ All customization is done through four topics:
 - `projects`
 - `contributions`
 - `resume`
+- `experience`
 
 To customize any of these, say, "topic" is one of these four. You need to go to `custom/[topic].js` and read it's comments.
 
