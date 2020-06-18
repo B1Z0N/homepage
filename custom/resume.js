@@ -8,16 +8,9 @@
 
 const resumes = [
     {
-        title : "C++ developer",
-        file : "FedurkoCppResume.pdf",
-        icon : "cpp.png",
-        updated : "15-12-2019" 
-    },
-    {
         title : "C developer",
         file : "FedurkoCResume.pdf",
         icon : "c.png",
         updated : "6-06-2020" 
     },
-
 ];
