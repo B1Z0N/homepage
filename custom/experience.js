@@ -21,4 +21,11 @@ const experience = [
     from: "nov 2019",
     to: "apr 2020",
   },
+  {
+    name: "Compatibl",
+    position: "C# + Math developer",
+    link: "https://www.compatibl.com/",
+    from: "jul 2020",
+    to: "nowadays",
+  },
 ];
