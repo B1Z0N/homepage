@@ -165,6 +165,13 @@ const skills = [
       position: 'backend',
     },
     {
+      skill: 'MongoDB',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'backend',
+    },
+    {
       skill: 'JQuery',
       pl: 'JS',
       hard_soft: 'hard',
