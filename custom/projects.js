@@ -6,6 +6,18 @@
 
 var projects = [
     {
+        'title' : 'Pussypup',
+        'date' : '2021-02-20',
+        'link' : 'https://github.com/666squared999/back',
+        'language' : ['Python', 'Django'],
+    },
+    {
+        'title' : 'API Grechka',
+        'date' : '2021-01-15',
+        'link' : 'https://github.com/666squared999/test-assignment-back',
+        'language' : ['Python', 'FastAPI'],
+    },
+    {
         'title' : 'Geo and Tag search microservice',
         'date' : '2020-01-21',
         'link' : 'https://github.com/B1Z0N/search-microservice',
