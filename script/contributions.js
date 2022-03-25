@@ -46,11 +46,7 @@ const languageFilterBy = arr => {
   var res = [];
   for (let contrib of arr) {
     var include;
-    if (typeof contrib["language"] === "string") {
-      include = contrib["language"] === lang || contrib["language"] === "any";
-    } else {
-      include = contrib["language"].includes(lang);
-    }
+    include = contrib["language"].includes(lang) || contrib["language"] === "any";
 
     if (lang === "any" || include === true) {
       res.push(contrib);

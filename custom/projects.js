@@ -6,6 +6,30 @@
 
 var projects = [
     {
+        'title' : 'Iahr - telegram userbot creation platform framework.',
+        'date' : 'pinned',
+        'link' : 'https://github.com/B1Z0N/iahr',
+        'language' : 'Python',
+    },
+    {
+        'title' : 'LazyshGen - get lazy at compiletime',
+        'date' : '2022-02-19',
+        'link' : 'https://github.com/B1Z0N/LazyshGen',
+        'language' : 'C#',
+    },
+    {
+        'title' : 'Fonly - telegram bot to view your docs in google drive',
+        'date' : '2021-12-21',
+        'link' : 'https://fonlybot.xyz/',
+        'language' : 'JS',
+    },
+    {
+        'title' : 'Nevermindy - telegram bot spaced repetition reminder',
+        'date' : '2021-10-19',
+        'link' : 'https://github.com/B1Z0N/nevermindybot',
+        'language' : 'C#',
+    },
+    {
         'title' : 'Pussypup',
         'date' : '2021-02-20',
         'link' : 'https://github.com/666squared999/back',
@@ -18,9 +42,33 @@ var projects = [
         'language' : ['Python', 'FastAPI'],
     },
     {
+        'title' : 'transgooberish - circular google translate',
+        'date' : '2021-04-10',
+        'link' : 'https://github.com/B1Z0N/transgoobberish',
+        'language' : 'Python',
+    },
+    {
+        'title' : 'BronzeXT - collection of my chrome extensions',
+        'date' : '2020-08-16',
+        'link' : 'https://github.com/B1Z0N/BronzeXT',
+        'language' : 'JS',
+    },
+    {
+        'title' : 'Derivas - library for analytical calculation',
+        'date' : '2020-08-01',
+        'link' : 'https://github.com/B1Z0N/derivas',
+        'language' : 'C#',
+    },
+    {
         'title' : 'Geo and Tag search microservice',
         'date' : '2020-01-21',
         'link' : 'https://github.com/B1Z0N/search-microservice',
+        'language' : 'Java',
+    },
+    {
+        'title' : 'Photo scale microservice',
+        'date' : '2020-01-05',
+        'link' : 'https://github.com/B1Z0N/photo-scale-microservice',
         'language' : 'Java',
     },
     {

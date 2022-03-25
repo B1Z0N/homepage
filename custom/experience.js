@@ -9,7 +9,7 @@
 const experience = [
   {
     name: "pet",
-    position: "oss | study",
+    position: "opensource | study",
     link: "/homepage",
     from: "mar 2017",
     to: "nov 2019",
@@ -26,6 +26,13 @@ const experience = [
     position: "C# + Math developer",
     link: "https://www.compatibl.com/",
     from: "jul 2020",
+    to: "nov 2021",
+  },
+  {
+    name: "Freelance",
+    position: "opensource | mentoring C#, Python",
+    link: "https://github.com/Vlad-Suk",
+    from: "sep 2021",
     to: "nowadays",
   },
 ];

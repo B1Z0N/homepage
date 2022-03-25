@@ -7,6 +7,12 @@
 
 const contributions = [
   {
+    title: "dotnet/runtime | answering questions",
+    link: "https://github.com/dotnet/runtime/issues/67004#issuecomment-1076161522",
+    language: ["C#", "C++"],
+    status: "answered"
+  },
+  {
     title: "Mus. instruments site | backend",
     link: "https://github.com/flykiller24/Coursach/pull/1",
     language: "JS",
@@ -56,4 +62,4 @@ const contributions = [
   }
 ];
 
-const langs = [ "C++", "JS", "Python", "C", "Java" ];
+const langs = [ "C++", "JS", "Python", "C", "Java", "C#" ];

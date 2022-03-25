@@ -108,13 +108,6 @@ const skills = [
       position: 'backend',
     },
     {
-      skill: 'Python core library',
-      pl: 'Python',
-      hard_soft: 'hard',
-      lvl: 'average',
-      position: 'backend',
-    },
-    {
       skill: 'Django',
       pl: 'Python',
       hard_soft: 'hard',
@@ -122,7 +115,7 @@ const skills = [
       position: 'backend',
     },
     {
-      skill: 'numpy, scipy',
+      skill: 'numpy, scipy, pandas',
       pl: 'Python',
       hard_soft: 'hard',
       lvl: 'beginner',
@@ -133,6 +126,13 @@ const skills = [
       pl: 'Python',
       hard_soft: 'hard',
       lvl: 'beginner',
+      position: '',
+    },
+    {
+      skill: 'telethon',
+      pl: 'Python',
+      hard_soft: 'hard',
+      lvl: 'average',
       position: '',
     },
     // JS
@@ -158,20 +158,6 @@ const skills = [
       position: 'backend',
     },
     {
-      skill: 'MySQL',
-      pl: ['JS', 'Python'],
-      hard_soft: 'hard',
-      lvl: 'average',
-      position: 'backend',
-    },
-    {
-      skill: 'MongoDB',
-      pl: 'any',
-      hard_soft: 'hard',
-      lvl: 'beginner',
-      position: 'backend',
-    },
-    {
       skill: 'JQuery',
       pl: 'JS',
       hard_soft: 'hard',
@@ -194,14 +180,21 @@ const skills = [
     },
     // Java
     {
-      skill: 'Java language basics',
+      skill: 'Java',
+      pl: 'java',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'any',
+    },
+    {
+      skill: 'vertx',
       pl: 'java',
       hard_soft: 'hard',
       lvl: 'beginner',
       position: 'any',
     },
     {
-      skill: 'vertx',
+      skill: 'spring',
       pl: 'java',
       hard_soft: 'hard',
       lvl: 'beginner',
@@ -212,9 +205,44 @@ const skills = [
       skill: 'C#',
       pl: 'C#',
       hard_soft: 'hard',
-      lvl: 'beginner',
+      lvl: 'advanced',
       position: 'any'
     },   
+    {
+      skill: 'Telegram.Bot',
+      pl: 'C#',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'any'
+    },
+    {
+      skill: 'Hangfire',
+      pl: 'C#',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'any'
+    },
+    {
+      skill: 'ASP.NET',
+      pl: 'C#',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'backend'
+    },
+    {
+      skill: 'EF',
+      pl: 'C#',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'backend'
+    },
+    {
+      skill: 'NUnit, XUnit, MsTest',
+      pl: 'C#',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'any'
+    },
     {
       skill: 'Selenium',
       pl: [ 'C#', 'JS' ],
@@ -223,6 +251,71 @@ const skills = [
       position: 'any'
     },
     // other
+    {
+      skill: 'Lisp',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'any',
+    },
+    {
+      skill: 'Racket',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'any',
+    },
+    {
+      skill: 'Prolog',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'any',
+    },
+    {
+      skill: 'shell',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'any',
+    },
+    {
+      skill: 'Linux',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'advanced',
+      position: 'any',
+    },
+    {
+      skill: 'Powershell',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'beginner',
+      position: 'any',
+    },
+
+    {
+      skill: 'MySQL',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'backend',
+    },
+    {
+      skill: 'PostgreSQL',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'backend',
+    },
+    {
+      skill: 'MongoDB',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'backend',
+    },
+
     {
       skill: 'Jenkins',
       pl: 'any',
@@ -234,7 +327,7 @@ const skills = [
       skill: 'Asynchronous programming',
       pl: 'any',
       hard_soft: 'hard',
-      lvl: 'beginner',
+      lvl: 'advanced',
       position: 'any'
     },
     {
@@ -242,13 +335,6 @@ const skills = [
       pl: 'any',
       hard_soft: 'hard',
       lvl: 'average',
-      position: 'any',
-    },
-    {
-      skill: 'Linux cmd user',
-      pl: 'any',
-      hard_soft: 'hard',
-      lvl: 'advanced',
       position: 'any',
     },
     {
@@ -266,6 +352,13 @@ const skills = [
       position: 'any',
     },
     {
+      skill: 'Applied math',
+      pl: 'any',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'any',
+    },
+    {
       skill: 'Design patterns',
       pl: 'any',
       hard_soft: 'hard',
@@ -276,7 +369,7 @@ const skills = [
       skill: 'TDD',
       pl: 'any',
       hard_soft: 'hard',
-      lvl: 'beginner',
+      lvl: 'average',
       position: 'any',
     },
     {
@@ -302,6 +395,13 @@ const skills = [
     },
     // soft skills
     {
+      skill: 'Mentoring',
+      pl: '',
+      hard_soft: 'soft',
+      lvl: '',
+      position: '',
+    },
+    {
       skill: 'Effective communication',
       pl: '',
       hard_soft: 'soft',
@@ -323,24 +423,24 @@ const skills = [
       position: '',
     },
     {
-      skill: 'Open-mindedness',
+      skill: 'Open-mindness',
       pl: '',
       hard_soft: 'soft',
-      lvl: 'advanced',
+      lvl: '',
       position: '',
     },
     {
       skill: 'Problem solving',
       pl: '',
       hard_soft: 'soft',
-      lvl: 'advanced',
+      lvl: '',
       position: '',
     },
     {
       skill: 'Creativity',
       pl: '',
       hard_soft: 'soft',
-      lvl: 'advanced',
+      lvl: '',
       position: '', 
     },
     {
@@ -357,10 +457,10 @@ const skills = [
 // 1. Programming language?
 const PLs = {
   'C++': 'cpp.png',
-  Python: 'python.png',
-  C: 'c.png',
-  JS: 'js.png',
-  Java: 'java.png',
+  'Python': 'python.png',
+  'C': 'c.png',
+  'JS': 'js.png',
+  'Java': 'java.png',
   'C#': 'csharp.png',
 };
 
