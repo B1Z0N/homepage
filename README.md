@@ -16,5 +16,9 @@ To customize any of these, say, "topic" is one of these four. You need to go to 
 
 # Future
 
+1. Switch to new modern design(canva).
+1. Update skills and experience.
+1. Make new pretty address.
 1. It may be useful to have some scripts to automate customization 
-2. Or even some actual backend to do this(like tg bots etc.)
+1. Or even some actual backend to do this(like tg bots etc.)
+
