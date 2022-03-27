@@ -17,6 +17,6 @@ const resumes = [
         title : "C# developer",
         file : "FedurkoCsharpResume.pdf",
         icon : "csharp.png",
-        updated : "03-25-2020" 
+        updated : "03-25-2022" 
     },
 ];
