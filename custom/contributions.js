@@ -7,6 +7,12 @@
 
 const contributions = [
   {
+    title: "dotnet/runtime",
+    link: "https://github.com/dotnet/runtime/pull/67696",
+    language: ["C#", "C++"],
+    status: "open"
+  },
+  {
     title: "dotnet/runtime | answering questions",
     link: "https://github.com/dotnet/runtime/issues/67004#issuecomment-1076161522",
     language: ["C#", "C++"],
