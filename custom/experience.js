@@ -26,13 +26,6 @@ const experience = [
     position: "C# + Math developer",
     link: "https://www.compatibl.com/",
     from: "jul 2020",
-    to: "nov 2021",
+    to: "apr 2022",
   },
-  {
-    name: "Freelance",
-    position: "opensource | mentoring C#, Python",
-    link: "https://github.com/Vlad-Suk",
-    from: "sep 2021",
-    to: "nowadays",
-  },
-];
+};
