@@ -10,7 +10,7 @@ const contributions = [
     title: "dotnet/runtime",
     link: "https://github.com/dotnet/runtime/pull/67696",
     language: "C#",
-    status: "open"
+    status: "merged"
   },
   {
     title: "dotnet/runtime | answering questions",
