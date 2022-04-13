@@ -28,4 +28,4 @@ const experience = [
     from: "jul 2020",
     to: "apr 2022",
   },
-};
+];
