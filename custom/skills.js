@@ -187,6 +187,20 @@ const skills = [
       position: 'any',
     },
     {
+      skill: 'JavaCC',
+      pl: 'java',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'any',
+    },
+    {
+      skill: 'ANTLR',
+      pl: 'java',
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'any',
+    },
+    {
       skill: 'vertx',
       pl: 'java',
       hard_soft: 'hard',
