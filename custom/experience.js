@@ -28,4 +28,11 @@ const experience = [
     from: "jul 2020",
     to: "apr 2022",
   },
+  {
+    name: "Microfocus",
+    position: "Programming language developer",
+    link: "https://www.microfocus.com/en-us/home",
+    from: "may 2022",
+    to: "nowadays",
+  },
 ];
