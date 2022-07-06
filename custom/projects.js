@@ -12,6 +12,18 @@ var projects = [
         'language' : 'Python',
     },
     {
+        'title' : 'AntlrCalculator - simple calculator based on ANTLR library',
+        'date' : '2022-05-01',
+        'link' : 'https://github.com/B1Z0N/AntlrCalculator',
+        'language' : 'Java',
+    },
+    {
+        'title' : 'LazyshGen - get lazy at compiletime',
+        'date' : '2022-02-19',
+        'link' : 'https://github.com/B1Z0N/LazyshGen',
+        'language' : 'C#',
+    },
+    {
         'title' : 'LazyshGen - get lazy at compiletime',
         'date' : '2022-02-19',
         'link' : 'https://github.com/B1Z0N/LazyshGen',
