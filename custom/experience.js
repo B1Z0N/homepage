@@ -26,7 +26,7 @@ const experience = [
     position: "C# + Math developer",
     link: "https://www.compatibl.com/",
     from: "jul 2020",
-    to: "nov 2021",
+    to: "apr 2021",
   },
   {
     name: "Microfocus",
