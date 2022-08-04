@@ -264,6 +264,13 @@ const skills = [
       lvl: 'beginner',
       position: 'any'
     },
+    {
+      skill: 'Roslyn API',
+      pl: [ 'C#' ],
+      hard_soft: 'hard',
+      lvl: 'average',
+      position: 'language development'
+    },
     // other
     {
       skill: 'Lisp',
@@ -277,7 +284,7 @@ const skills = [
       pl: 'any',
       hard_soft: 'hard',
       lvl: 'beginner',
-      position: 'any',
+      position: 'language development',
     },
     {
       skill: 'Prolog',
@@ -483,7 +490,7 @@ const lvls = [ 'beginner', 'average', 'advanced'];
 // 3. Skill type?
 const skillType = [ 'hard', 'soft' ];
 // 4. Work position?
-const position = [ 'backend' ];
+const position = [ 'backend', 'language development'];
 
 // if so, add new type to one of this arrays(appropriate one)
 
