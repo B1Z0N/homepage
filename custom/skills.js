@@ -414,6 +414,48 @@ const skills = [
       lvl: 'beginner',
       position: 'any',
     },
+    {
+        skill: 'EMF',
+        pl: 'any',
+        hard_soft: 'hard',
+        lvl: 'beginner',
+        position: 'any'
+    },
+    {
+        skill: 'Xtext',
+        pl: 'any',
+        hard_soft: 'hard',
+        lvl: 'beginner',
+        position: 'any'
+    },
+    {
+        skill: 'ATL',
+        pl: 'any',
+        hard_soft: 'hard',
+        lvl: 'beginner',
+        position: 'any'
+    },
+    {
+        skill: 'QVT',
+        pl: 'any',
+        hard_soft: 'hard',
+        lvl: 'beginner',
+        position: 'any'
+    },
+    {
+        skill: 'Acceleo',
+        pl: 'any',
+        hard_soft: 'hard',
+        lvl: 'beginner',
+        position: 'any'
+    },
+    {
+        skill: 'Model-driven engineering',
+        pl: 'any',
+        hard_soft: 'hard',
+        lvl: 'beginner',
+        position: 'any'
+    },
     // soft skills
     {
       skill: 'Mentoring',
